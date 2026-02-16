@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock-Paper-Scissors</h1>
+    <div class="game-container">
+        <div class="player-section">
+            <h2>Player 1</h2>
+            <div class="score">Player 1: <span id="player1-score">0</span></div>
+            <div class="choices">
+                <button onclick="selectChoice('player1', 'rock')">✊ Rock</button>
+                <button onclick="selectChoice('player1', 'paper')">✋ Paper</button>
+                <button onclick="selectChoice('player1', 'scissors')">✌️ Scissors</button>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <div class="round-counter">Round: <span id="round-number">1</span> / 10</div>
+            <div class="message"></div>
+            <button id="reset-button" style="display:none;">Play Again</button>
+        </div>
+
+        <div class="player-section">
+            <h2>Player 2</h2>
+            <div class="score">Player 2: <span id="player2-score">0</span></div>
+            <div class="choices">
+                <button onclick="selectChoice('player2', 'rock')">✊ Rock</button>
+                <button onclick="selectChoice('player2', 'paper')">✋ Paper</button>
+                <button onclick="selectChoice('player2', 'scissors')">✌️ Scissors</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-status">
+        <div id="player1-choice-display"></div>
+        <div id="player2-choice-display"></div>
+        <div id="final-winner"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

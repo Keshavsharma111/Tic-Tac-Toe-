@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Output</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .system-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .input-row {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 5px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .input-item {
+            border: 1px solid #ccc;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .input-item:last-child {
+            justify-content: center;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .invoice-table th,
+        .invoice-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .invoice-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .invoice-table td:nth-child(2),
+        .invoice-table td:nth-child(3),
+        .invoice-table td:nth-child(4) {
+            text-align: right;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            cursor: pointer;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .grand-total-row {
+            font-weight: bold;
+            text-align: right;
+            border-top: 1px solid #ddd;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <div class="system-header">Invoice Management System</div>
+
+    <div class="input-row">
+        <div class="input-item">Invoice Number</div>
+        <div class="input-item">Customer Name</div>
+        <div class="input-item">Item Name</div>
+        <div class="input-item">Quantity</div>
+        <div class="input-item">Price per Item</div>
+        <div class="input-item">Add Item</div>
+    </div>
+
+    <h4>Invoice Details</h4>
+    <table class="invoice-table">
+        <thead>
+            <tr>
+                <th style="width: 35%;">Item Name</th>
+                <th style="width: 15%;">Quantity</th>
+                <th style="width: 15%;">Price</th>
+                <th style="width: 15%;">Total</th>
+                <th style="width: 10%;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Car Toy</td>
+                <td>3</td>
+                <td>₹89</td>
+                <td>₹267</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Big Gun Toy</td>
+                <td>5</td>
+                <td>₹123</td>
+                <td>₹615</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+            
+            <tr class="grand-total-row">
+                <td colspan="3" style="border: none;"></td>
+                <td style="border-right: none;">Grand Total:</td>
+                <td style="text-align: left;">₹882</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
